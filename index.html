@@ -1,12 +1,15 @@
-<!DOCTYPE html>
+
+   
+
+    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coming Soon | My Photo Website</title>
+  <title>Coming Soon | My Pictures Production</title>
 
   <style>
-    /* Reset & layout */
+    /* Reset & base styling */
     * {
       margin: 0;
       padding: 0;
@@ -17,52 +20,60 @@
     body {
       height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
-      color: #fff;
       text-align: center;
-      flex-direction: column;
+      background: 
+        linear-gradient(135deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url('https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f') 
+        center/cover no-repeat;
+      color: #fff;
       padding: 20px;
     }
 
-    h1 {
-      font-size: 3rem;
+    .title {
+      font-size: 2.8rem;
       letter-spacing: 2px;
-      margin-bottom: 1rem;
       text-transform: uppercase;
+      font-weight: 600;
       animation: fadeInDown 1s ease-out;
     }
 
-    p {
+    .slogan {
       font-size: 1.2rem;
+      margin-top: 0.5rem;
       opacity: 0.9;
-      margin-bottom: 1rem;
-      animation: fadeInUp 1.5s ease-out;
+      font-style: italic;
+      animation: fadeInDown 1.5s ease-out;
+    }
+
+    .coming {
+      margin-top: 2rem;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      animation: fadeInUp 1.3s ease-out;
+    }
+
+    .description {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      opacity: 0.85;
+      max-width: 600px;
+      line-height: 1.6;
+      animation: fadeIn 2s ease-out;
     }
 
     .contact-info {
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       font-size: 1.1rem;
-      opacity: 0.85;
+      line-height: 1.6;
       animation: fadeIn 2s ease-out;
-      line-height: 1.8;
     }
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    .contact-info a {
+      color: #fff;
+      text-decoration: underline;
     }
 
     footer {
@@ -71,18 +82,46 @@
       font-size: 0.9rem;
       opacity: 0.7;
     }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
   </style>
 </head>
 <body>
-  <h1>Coming Soon</h1>
-  <p>Our stunning photo gallery is almost ready. Stay tuned!</p>
+
+  <h1 class="title">My Pictures Production</h1>
+  <p class="slogan">Producing Stories Through Sound & Visuals</p>
+
+  <h2 class="coming">Coming Soon</h2>
+
+  <p class="description">
+    We are bringing a creative space dedicated to folk music, cultural productions, 
+    and visually compelling storytelling. Our full website will be live shortly. 
+    Stay tuned!
+    
+    We are bringing cinematic vision and creative precision to modern filmmaking. 
+  </p>
 
   <div class="contact-info">
-    <p>Please connect with us using mobile or email:</p>
-    <p>📞 Mobile: <strong>+91 9784228555</strong></p>
-    <p>📧 Email: <strong>mypictures3724@gmail.com</strong></p>
+    <p>Please connect with us:</p>
+    <p>📞 Phone: <a href="tel:+919784228555">+91 97842 28555</a></p>
+    <p>📧 Email: <a href="mailto:mypictures3724@gmail.com">mypictures3724@gmail.com</a></p>
   </div>
 
-  <footer>© 2025 My Pictures Website</footer>
+  <footer>© 2025 My Pictures Production</footer>
+
 </body>
 </html>
