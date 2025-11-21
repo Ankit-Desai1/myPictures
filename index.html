@@ -24,6 +24,7 @@
       color: #fff;
       text-align: center;
       flex-direction: column;
+      padding: 20px;
     }
 
     h1 {
@@ -37,23 +38,16 @@
     p {
       font-size: 1.2rem;
       opacity: 0.9;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       animation: fadeInUp 1.5s ease-out;
     }
 
-    .button {
-      padding: 12px 25px;
-      border: 2px solid #fff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 25px;
-      transition: 0.3s;
+    .contact-info {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      opacity: 0.85;
       animation: fadeIn 2s ease-out;
-    }
-
-    .button:hover {
-      background: #fff;
-      color: #000;
+      line-height: 1.8;
     }
 
     @keyframes fadeInDown {
@@ -82,8 +76,13 @@
 <body>
   <h1>Coming Soon</h1>
   <p>Our stunning photo gallery is almost ready. Stay tuned!</p>
-  <a href="#" class="button">Notify Me</a>
 
-  <footer>© 2025 My Photo Website</footer>
+  <div class="contact-info">
+    <p>Please connect with us using mobile or email:</p>
+    <p>📞 Mobile: <strong>+91 98765 43210</strong></p>
+    <p>📧 Email: <strong>info@mypictures.in</strong></p>
+  </div>
+
+  <footer>© 2025 My Pictures Website</footer>
 </body>
 </html>
