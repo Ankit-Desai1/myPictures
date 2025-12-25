@@ -6,7 +6,6 @@
   <title>Coming Soon | M.Y Studio</title>
 
   <style>
-    /* Reset & base */
     * {
       margin: 0;
       padding: 0;
@@ -15,203 +14,206 @@
     }
 
     body {
-      min-height: 100vh;
-      width: 100%;
-      display: block;
-      text-align: center;
       background: 
-        linear-gradient(135deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-        url('https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f') 
-        center/cover no-repeat;
+        linear-gradient(135deg, rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url('https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f') center/cover no-repeat;
       color: #fff;
-      padding: 40px 20px;
-      overflow-y: auto;
+      padding: 0;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
-    .title {
-      font-size: 2.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 600;
+    header {
+      padding-top: 60px;
       animation: fadeInDown 1s ease-out;
-      text-shadow: 0 0 15px rgba(255,255,255,0.7), 0 0 30px rgba(0,0,0,0.7);
     }
 
-    .tagline {
-      font-size: 1.3rem;
-      margin-top: 0.5rem;
-      opacity: 0.9;
-      animation: fadeInDown 1.3s ease-out;
-      font-weight: 500;
+    h1.title {
+      font-size: 3.2rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      text-transform: uppercase;
     }
 
     .slogan {
-      font-size: 1.1rem;
-      margin-top: 0.2rem;
-      opacity: 0.85;
+      font-size: 1.2rem;
+      margin-top: 0.3rem;
+      opacity: 0.9;
       font-style: italic;
     }
 
     .coming {
-      margin-top: 2rem;
+      margin-top: 1rem;
       font-size: 2rem;
       letter-spacing: 1px;
-      animation: fadeInUp 1.3s ease-out;
     }
 
     .description {
-      margin-top: 1rem;
-      font-size: 1.1rem;
-      opacity: 0.85;
-      max-width: 650px;
-      line-height: 1.6;
-      animation: fadeIn 2s ease-out;
-      margin-left: auto;
-      margin-right: auto;
+      margin-top: 0.5rem;
+      font-size: 1.15rem;
+      opacity: 0.9;
     }
 
-    .contact-info, .details, .services {
+    /* Contact */
+    .contact-info {
       margin-top: 2rem;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       line-height: 1.6;
-      animation: fadeIn 2s ease-out;
-      max-width: 850px;
-      margin-left: auto;
-      margin-right: auto;
+    }
+    .contact-info a { color: #fff; text-decoration: underline; }
+
+    /* SERVICES SECTION */
+    #services {
+      width: 90%;
+      max-width: 1000px;
+      margin: 60px auto;
+      text-align: center;
     }
 
-    .contact-info a, .details a {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    /* Services zig-zag layout */
-    .services h3 {
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
+    #services h2 {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      font-weight: 600;
     }
 
-    .service-card {
+    .service-row {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 25px;
-      margin-bottom: 35px;
+      margin: 40px 0;
+      flex-wrap: wrap;
     }
 
-    .service-card img {
-      width: 160px;
-      height: 140px;
+    .service-row img {
+      width: 340px;
+      height: 220px;
+      border-radius: 15px;
       object-fit: cover;
-      border-radius: 10px;
-      border: 2px solid rgba(255,255,255,0.5);
+      box-shadow: 0 0 15px rgba(255,255,255,0.35);
     }
 
     .service-text {
-      text-align: left;
-      font-size: 1.15rem;
+      max-width: 430px;
+      font-size: 1.1rem;
       line-height: 1.6;
-      font-weight: 400;
+      opacity: 0.95;
+      text-align: left;
     }
 
-    .service-card:nth-child(even) {
+    /* Reverse (ZIG ZAG) */
+    .reverse {
       flex-direction: row-reverse;
     }
 
-    @media (max-width: 700px) {
-      .service-card,
-      .service-card:nth-child(even) {
-        flex-direction: column;
-        text-align: center;
-      }
-      .service-text { text-align: center; }
-    }
-
     footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
+      margin: 40px 0 20px;
       opacity: 0.7;
+      font-size: 0.9rem;
     }
 
-    /* Animations */
-    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-25px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInDown {
+      from {opacity:0; transform: translateY(-25px);}
+      to {opacity:1; transform: translateY(0);}
+    }
   </style>
 </head>
+
 <body>
 
+<header>
   <h1 class="title">M.Y Studio</h1>
-  <p class="tagline">M. Y Pictures & Cine Wave Studio Jaipur</p>
   <p class="slogan">Producing Stories Through Sound & Visuals</p>
-
   <h2 class="coming">Coming Soon...</h2>
-
   <p class="description">
     We are bringing cinematic vision and creative precision to modern filmmaking.
   </p>
+</header>
 
-  <div class="details">
-    <p>📍 Address: Cine Wave Studio Jaipur,<br>
-     B-114, Bank Officer's Colony, Ramnagariya,<br>
-     Jagatpura, Jaipur, Rajasthan – 302017</p>
+<!-- CONTACT / ADDRESS -->
+<div class="contact-info">
+  <p><strong>M. Y Pictures & Cine Wave Studio Jaipur</strong></p>
+  <p>📞 Mobile: <a href="tel:+918005861030">8005861030</a>, <a href="tel:+919784228555">9784228555</a></p>
+  <p>🏢 Address: Cine Wave Studio Jaipur B-114, Bank Officer's Colony, Ramnagariya, Jagatpura, Jaipur, 302017</p>
+  <p>📧 Email: <a href="mailto:mypictures3724@gmail.com">mypictures3724@gmail.com</a></p>
+  <p>🌐 Website: <a href="https://mypictures.in/" target="_blank">https://mypictures.in/</a></p>
+</div>
 
-    <p>🌐 Website: <a href="https://mypictures.in/" target="_blank">https://mypictures.in/</a></p>
-  </div>
+<!-- SERVICES SECTION -->
+<section id="services">
+  <h2>Our Core Services</h2>
 
-  <div class="contact-info">
-    <p>Please connect with us:</p>
-    <p>📞 Mobile: <a href="tel:+918005861030">8005861030</a>, 
-       <a href="tel:+919784228555">9784228555</a></p>
-    <p>📧 Email: <a href="mailto:mypictures3724@gmail.com">mypictures3724@gmail.com</a></p>
-  </div>
-
-  <div class="services">
-    <h3>Our Core Services</h3>
-
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=300" />
-      <div class="service-text">Complete Film Making • Short Movies</div>
-    </div>
-
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=300" />
-      <div class="service-text">Song Voice Recording • Song Shoots</div>
-    </div>
-
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=300" />
-      <div class="service-text">Documentaries • Ad Shoots • Print Shoots</div>
-    </div>
-
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1481391032119-d89befc71cbf?q=80&w=300" />
-      <div class="service-text">Pre Production • Concept • Script • Casting</div>
-    </div>
-
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=300" />
-      <div class="service-text">Production • Direction • Cinematography • Sound</div>
-    </div>
-
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1556156652-a8f707c7e581?q=80&w=300" />
-      <div class="service-text">Post Production • Editing • VFX • Colour Grading</div>
-    </div>
-
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1600369672866-18d6f0a00c2d?q=80&w=300" />
-      <div class="service-text">Specialized Wedding Shoots • Pre Wedding Shoots</div>
-    </div>
-
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=300" />
-      <div class="service-text">Events • Campaign Videos</div>
+  <div class="service-row">
+    <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf" alt="Film Making" />
+    <div class="service-text">
+      🎬 <b>Complete Film Making • Short Movies</b><br>
+      From concept to release — we create films that deliver emotion and impact.
     </div>
   </div>
 
-  <footer>© 2025 M.Y Studio</footer>
+  <div class="service-row reverse">
+    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d" alt="Song Recording" />
+    <div class="service-text">
+      🎤 <b>Song Voice Recording • Song Shoots</b><br>
+      Studio-grade audio recording & cinematic video shoots for artists.
+    </div>
+  </div>
+
+  <div class="service-row">
+    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4" alt="Ads & Documentaries" />
+    <div class="service-text">
+      📺 <b>Documentaries • Ad Shoots • Print Shoots</b><br>
+      Commercial, branding & storytelling visuals for businesses.
+    </div>
+  </div>
+
+  <div class="service-row reverse">
+    <img src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107" alt="Pre Production" />
+    <div class="service-text">
+      🧠 <b>Pre-Production: Concept • Script • Casting</b><br>
+      We plan every detail for a powerful outcome.
+    </div>
+  </div>
+
+  <div class="service-row">
+    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Production Set" />
+    <div class="service-text">
+      🎥 <b>Production: Direction • Cinematography • Sound</b><br>
+      Professional full-scale production with the best equipment.
+    </div>
+  </div>
+
+  <div class="service-row reverse">
+    <img src="https://images.unsplash.com/photo-1581093588401-22be9c5e1a89" alt="Editing" />
+    <div class="service-text">
+      🧑‍💻 <b>Post Production: Editing • VFX • Colour Grading</b><br>
+      Advanced digital editing, dramatic visuals & cinematic polish.
+    </div>
+  </div>
+
+  <div class="service-row">
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Wedding Shoots" />
+    <div class="service-text">
+      💍 <b>Specialized Wedding & Pre-Wedding Shoots</b><br>
+      Capturing emotions, culture & memories beautifully.
+    </div>
+  </div>
+
+  <div class="service-row reverse">
+    <img src="https://images.unsplash.com/photo-1515169067865-5387ec356754" alt="Events" />
+    <div class="service-text">
+      🎤 <b>Events • Campaign Videos</b><br>
+      Corporate, public, political & creative event videos.
+    </div>
+  </div>
+</section>
+
+<footer>© 2025 M.Y Studio</footer>
 
 </body>
 </html>
