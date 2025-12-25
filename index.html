@@ -73,33 +73,45 @@
       color: #fff;
       text-decoration: underline;
     }
+.services {
+  margin-top: 2.5rem;
+  animation: fadeIn 2s ease-out;
+  max-width: 850px;
+}
 
-   .services {
-    margin-top: 2rem;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    animation: fadeIn 2s ease-out;
-    max-width: 720px;
-  }
+.service-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 35px;
+}
 
-  .services ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px 25px;
-    list-style: none;
-    padding-left: 0;
+.service-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.service-text {
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.service-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 700px) {
+  .service-card,
+  .service-card:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
   }
+  .service-text { text-align: center; }
+}
     
-    @media (max-width: 600px) {
-      .services ul {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .services ul li {
-      padding: 4px 0;
-    }
-
     footer {
       margin-top: 3rem;
       font-size: 0.9rem;
@@ -150,19 +162,50 @@
     <p>📧 Email: <a href="mailto:mypictures3724@gmail.com">mypictures3724@gmail.com</a></p>
   </div>
 
-  <div class="services">
-    <h3>Our Core Services</h3>
-    <ul>
-      <li>• Complete Film Making | Short Movies</li>
-      <li>• Song Voice Recording | Song Shoots</li>
-      <li>• Documentaries | Ad Shoots | Print Shoots</li>
-      <li>• Pre Production | Concept | Script | Casting</li>
-      <li>• Production | Direction | Cinematography | Sound</li>
-      <li>• Post Production | Editing | VFX | Colour Grading</li>
-      <li>• Specialized Wedding Shoots | Pre Wedding Shoots</li>
-      <li>• Events | Campaign Videos</li>
-    </ul>
+<div class="services">
+  <h3>Our Core Services</h3>
+
+  <div class="service-card">
+    <img src="https://via.placeholder.com/250x200?text=Film+Making" />
+    <div class="service-text">Complete Film Making • Short Movies</div>
   </div>
+
+  <div class="service-card">
+    <img src="https://via.placeholder.com/250x200?text=Song+Recording" />
+    <div class="service-text">Song Voice Recording • Song Shoots</div>
+  </div>
+
+  <div class="service-card">
+    <img src="https://via.placeholder.com/250x200?text=Documentaries" />
+    <div class="service-text">Documentaries • Ad Shoots • Print Shoots</div>
+  </div>
+
+  <div class="service-card">
+    <img src="https://via.placeholder.com/250x200?text=Pre+Production" />
+    <div class="service-text">Pre Production • Concept • Script • Casting</div>
+  </div>
+
+  <div class="service-card">
+    <img src="https://via.placeholder.com/250x200?text=Production" />
+    <div class="service-text">Production • Direction • Cinematography • Sound</div>
+  </div>
+
+  <div class="service-card">
+    <img src="https://via.placeholder.com/250x200?text=Post+Production" />
+    <div class="service-text">Post Production • Editing • VFX • Colour Grading</div>
+  </div>
+
+  <div class="service-card">
+    <img src="https://via.placeholder.com/250x200?text=Wedding+Shoots" />
+    <div class="service-text">Specialized Wedding Shoots • Pre Wedding Shoots</div>
+  </div>
+
+  <div class="service-card">
+    <img src="https://via.placeholder.com/250x200?text=Events" />
+    <div class="service-text">Events • Campaign Videos</div>
+  </div>
+</div>
+
 
   <footer>© 2025 M.Y Studio</footer>
 
