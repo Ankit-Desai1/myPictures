@@ -27,6 +27,7 @@
         center/cover no-repeat;
       color: #fff;
       padding: 20px;
+      overflow-y: auto;
     }
 
     .title {
@@ -37,12 +38,11 @@
       animation: fadeInDown 1s ease-out;
     }
 
-    .slogan {
-      font-size: 1.2rem;
+    .tagline {
+      font-size: 1.3rem;
       margin-top: 0.5rem;
       opacity: 0.9;
-      font-style: italic;
-      animation: fadeInDown 1.5s ease-out;
+      animation: fadeInDown 1.3s ease-out;
     }
 
     .coming {
@@ -56,26 +56,35 @@
       margin-top: 1rem;
       font-size: 1.1rem;
       opacity: 0.85;
-      max-width: 600px;
+      max-width: 650px;
       line-height: 1.6;
       animation: fadeIn 2s ease-out;
     }
 
-    .contact-info {
+    .contact-info, .details, .services {
       margin-top: 2rem;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       line-height: 1.6;
       animation: fadeIn 2s ease-out;
+      max-width: 720px;
     }
 
-    .contact-info a {
+    .contact-info a, .details a {
       color: #fff;
       text-decoration: underline;
     }
 
+    .services ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .services ul li {
+      padding: 4px 0;
+    }
+
     footer {
-      position: absolute;
-      bottom: 20px;
+      margin-top: 3rem;
       font-size: 0.9rem;
       opacity: 0.7;
     }
@@ -100,6 +109,7 @@
 <body>
 
   <h1 class="title">M.Y Studio</h1>
+  <p class="tagline">M. Y Pictures & Cine Wave Studio Jaipur</p>
   <p class="slogan">Producing Stories Through Sound & Visuals</p>
 
   <h2 class="coming">Coming Soon...</h2>
@@ -108,10 +118,33 @@
     We are bringing cinematic vision and creative precision to modern filmmaking.
   </p>
 
+  <div class="details">
+    <p>📍 Address: Cine Wave Studio Jaipur,<br>
+     B-114, Bank Officer's Colony, Ramnagariya,<br>
+     Jagatpura, Jaipur, Rajasthan – 302017</p>
+
+    <p>🌐 Website: <a href="https://mypictures.in/" target="_blank">https://mypictures.in/</a></p>
+  </div>
+
   <div class="contact-info">
     <p>Please connect with us:</p>
-    <p>📞 Phone: <a href="tel:+919784228555">+91 97842 28555</a></p>
+    <p>📞 Mobile: <a href="tel:+918005861030">8005861030</a>, 
+       <a href="tel:+919784228555">9784228555</a></p>
     <p>📧 Email: <a href="mailto:mypictures3724@gmail.com">mypictures3724@gmail.com</a></p>
+  </div>
+
+  <div class="services">
+    <h3>Our Core Services</h3>
+    <ul>
+      <li>• Complete Film Making | Short Movies</li>
+      <li>• Song Voice Recording | Song Shoots</li>
+      <li>• Documentaries | Ad Shoots | Print Shoots</li>
+      <li>• Pre Production | Concept | Script | Casting</li>
+      <li>• Production | Direction | Cinematography | Sound</li>
+      <li>• Post Production | Editing | VFX | Colour Grading</li>
+      <li>• Specialized Wedding Shoots | Pre Wedding Shoots</li>
+      <li>• Events | Campaign Videos</li>
+    </ul>
   </div>
 
   <footer>© 2025 M.Y Studio</footer>
