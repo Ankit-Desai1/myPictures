@@ -6,7 +6,7 @@
   <title>Coming Soon | M.Y Studio</title>
 
   <style>
-    /* Reset & base styling */
+    /* Reset & base */
     * {
       margin: 0;
       padding: 0;
@@ -15,18 +15,16 @@
     }
 
     body {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      min-height: 100vh;
+      width: 100%;
+      display: block;
       text-align: center;
       background: 
         linear-gradient(135deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
         url('https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f') 
         center/cover no-repeat;
       color: #fff;
-      padding: 20px;
+      padding: 40px 20px;
       overflow-y: auto;
     }
 
@@ -36,6 +34,7 @@
       text-transform: uppercase;
       font-weight: 600;
       animation: fadeInDown 1s ease-out;
+      text-shadow: 0 0 15px rgba(255,255,255,0.7), 0 0 30px rgba(0,0,0,0.7);
     }
 
     .tagline {
@@ -43,6 +42,14 @@
       margin-top: 0.5rem;
       opacity: 0.9;
       animation: fadeInDown 1.3s ease-out;
+      font-weight: 500;
+    }
+
+    .slogan {
+      font-size: 1.1rem;
+      margin-top: 0.2rem;
+      opacity: 0.85;
+      font-style: italic;
     }
 
     .coming {
@@ -59,6 +66,8 @@
       max-width: 650px;
       line-height: 1.6;
       animation: fadeIn 2s ease-out;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .contact-info, .details, .services {
@@ -66,52 +75,59 @@
       font-size: 1.05rem;
       line-height: 1.6;
       animation: fadeIn 2s ease-out;
-      max-width: 720px;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .contact-info a, .details a {
       color: #fff;
       text-decoration: underline;
     }
-.services {
-  margin-top: 2.5rem;
-  animation: fadeIn 2s ease-out;
-  max-width: 850px;
-}
 
-.service-card {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  margin-bottom: 35px;
-}
+    /* Services zig-zag layout */
+    .services h3 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-.service-card img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 12px;
-}
+    .service-card {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 35px;
+    }
 
-.service-text {
-  text-align: left;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
+    .service-card img {
+      width: 160px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid rgba(255,255,255,0.5);
+    }
 
-.service-card:nth-child(even) {
-  flex-direction: row-reverse;
-}
+    .service-text {
+      text-align: left;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      font-weight: 400;
+    }
 
-@media (max-width: 700px) {
-  .service-card,
-  .service-card:nth-child(even) {
-    flex-direction: column;
-    text-align: center;
-  }
-  .service-text { text-align: center; }
-}
-    
+    .service-card:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    @media (max-width: 700px) {
+      .service-card,
+      .service-card:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+      }
+      .service-text { text-align: center; }
+    }
+
     footer {
       margin-top: 3rem;
       font-size: 0.9rem;
@@ -119,20 +135,9 @@
     }
 
     /* Animations */
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-25px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(25px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-25px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
   </style>
 </head>
 <body>
@@ -162,50 +167,49 @@
     <p>📧 Email: <a href="mailto:mypictures3724@gmail.com">mypictures3724@gmail.com</a></p>
   </div>
 
-<div class="services">
-  <h3>Our Core Services</h3>
+  <div class="services">
+    <h3>Our Core Services</h3>
 
-  <div class="service-card">
-    <img src="https://via.placeholder.com/250x200?text=Film+Making" />
-    <div class="service-text">Complete Film Making • Short Movies</div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=300" />
+      <div class="service-text">Complete Film Making • Short Movies</div>
+    </div>
+
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=300" />
+      <div class="service-text">Song Voice Recording • Song Shoots</div>
+    </div>
+
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=300" />
+      <div class="service-text">Documentaries • Ad Shoots • Print Shoots</div>
+    </div>
+
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1481391032119-d89befc71cbf?q=80&w=300" />
+      <div class="service-text">Pre Production • Concept • Script • Casting</div>
+    </div>
+
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=300" />
+      <div class="service-text">Production • Direction • Cinematography • Sound</div>
+    </div>
+
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1556156652-a8f707c7e581?q=80&w=300" />
+      <div class="service-text">Post Production • Editing • VFX • Colour Grading</div>
+    </div>
+
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1600369672866-18d6f0a00c2d?q=80&w=300" />
+      <div class="service-text">Specialized Wedding Shoots • Pre Wedding Shoots</div>
+    </div>
+
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=300" />
+      <div class="service-text">Events • Campaign Videos</div>
+    </div>
   </div>
-
-  <div class="service-card">
-    <img src="https://via.placeholder.com/250x200?text=Song+Recording" />
-    <div class="service-text">Song Voice Recording • Song Shoots</div>
-  </div>
-
-  <div class="service-card">
-    <img src="https://via.placeholder.com/250x200?text=Documentaries" />
-    <div class="service-text">Documentaries • Ad Shoots • Print Shoots</div>
-  </div>
-
-  <div class="service-card">
-    <img src="https://via.placeholder.com/250x200?text=Pre+Production" />
-    <div class="service-text">Pre Production • Concept • Script • Casting</div>
-  </div>
-
-  <div class="service-card">
-    <img src="https://via.placeholder.com/250x200?text=Production" />
-    <div class="service-text">Production • Direction • Cinematography • Sound</div>
-  </div>
-
-  <div class="service-card">
-    <img src="https://via.placeholder.com/250x200?text=Post+Production" />
-    <div class="service-text">Post Production • Editing • VFX • Colour Grading</div>
-  </div>
-
-  <div class="service-card">
-    <img src="https://via.placeholder.com/250x200?text=Wedding+Shoots" />
-    <div class="service-text">Specialized Wedding Shoots • Pre Wedding Shoots</div>
-  </div>
-
-  <div class="service-card">
-    <img src="https://via.placeholder.com/250x200?text=Events" />
-    <div class="service-text">Events • Campaign Videos</div>
-  </div>
-</div>
-
 
   <footer>© 2025 M.Y Studio</footer>
 
