@@ -74,9 +74,26 @@
       text-decoration: underline;
     }
 
-    .services ul {
-      list-style: none;
-      padding-left: 0;
+   .services {
+    margin-top: 2rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    animation: fadeIn 2s ease-out;
+    max-width: 720px;
+  }
+
+  .services ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 25px;
+    list-style: none;
+    padding-left: 0;
+  }
+    
+    @media (max-width: 600px) {
+      .services ul {
+        grid-template-columns: 1fr;
+      }
     }
 
     .services ul li {
